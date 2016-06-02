@@ -33,5 +33,5 @@ var/
 /services/*/
 
 # Application Log Files
-/logs/*
+/logs/*.log
 
