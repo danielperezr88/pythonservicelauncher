@@ -14,7 +14,7 @@ class ServiceLogger:
 
     def __init__(self, log, name, kind):
         handler = RotatingFileHandler(os.path.join("logs",log),maxBytes=1024*1024,backupCount=10)
-        formatter = Formatter('[' + kind + "]\t%(asctime)s\t%(name)-12s\t%(levelname)-7.7s\t%(message)s","%d-%m-%Y %H:%M:%S")
+        formatter = Formatter('[' + kind + "]\t%(asctime)s\t%(name)-15s\t%(levelname)-7.7s\t%(message)s","%d-%m-%Y %H:%M:%S")
         handler.setFormatter(formatter)
         self.logger = getLogger(name)
         self.logger.handlers = []
