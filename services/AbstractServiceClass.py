@@ -2,10 +2,8 @@
 import sys
 import os
 import inspect
-import types
 import datetime
 import time
-from importlib.abc import SourceLoader
 from crontab import CronTab
 from croniter import croniter
 from ServiceException import LoggerException, ScheduleException, ScriptException
