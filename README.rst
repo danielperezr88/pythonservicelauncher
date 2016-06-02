@@ -2,7 +2,6 @@ Python Service Launcher for Windows (Python Cron) v0.9
 ======================================================
 Python Tool for Windows Service Loading and Scheduling
 
-
 Usage Example - LogWriterSvc.py
 -------------------------------
 This script opens a log and writes to it with ``serviceCron.tab`` scheduling:
@@ -26,6 +25,12 @@ Format Rules to Follow
 - You'll have to use ``LogWriterSvc.py`` as a template for your custom scripts.
 - Script name must be ``<class name>Svc.py`` for ``ServiceLauncher`` to load it as such thing, and it must be placed in ``services\`` folder. All other files into ``services\`` folder are to be consumed by services themselves or ``AbstractServiceClass``.
 - Every script must have its own cron rule into ``services\serviceCron.tab``. This rules follow usual Unix cron format.
+
+Prerequisites
+-------------
+Didn't I say this doesn't work on its own?... No I didn't, I know.
+
+Ok, so for this to work you'll probably need to download some packages, of course. Less usual are ``pywin32``, ``python-crontab`` (not ``crontab``), ``croniter``.
 
 How to enjoy
 ------------
