@@ -1,0 +1,37 @@
+# Third's Software Utility files/folders
+.idea/
+
+# Python Utility files/folders
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Own services
+/services/*Svc.py
+!/services/LogWriterSvc.py
+/services/*/
+
+# Application Log Files
+/logs/*
+
