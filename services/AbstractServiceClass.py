@@ -39,6 +39,7 @@ class AbstractServiceClass(metaclass=ABCMeta):
             self._classname_ = self.__class__.__name__
             self.__load__logger__()
             self.__load__schedule__()
+            self.log('Just Instantiated!')
 
         def __del__(self):
             del self._logger_
@@ -54,7 +55,11 @@ class AbstractServiceClass(metaclass=ABCMeta):
 
         def __load__logger__(self):
             try:
-                self._logger_ = ServiceLogger('services.log', (self._classname_[:12] + '...') if len(self._classname_) > 12 else self._classname_, 'Service')
+                self._logger_ = ServiceLogger('services.log',
+                                              (self._classname_[:12] + '...') if len(self._classname_) > 12
+                                              else self._classname_,
+                                              'Service')
+
             except Exception as x:
                 raise LoggerException('Service %s failed on logger instantiation. Message: %s' % (
                     self._classname_, x))
